@@ -1,3 +1,4 @@
+''' Faça um programa que leia um numero e mostre seu dobro, triplo e raiz quadrada'''
 n1 = int(input("digite um numero: "))
 dobro = n1 * 2
 triplo = n1 * 3
