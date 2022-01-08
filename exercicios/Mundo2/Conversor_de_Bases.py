@@ -12,8 +12,9 @@ base = int(input('''Escolha uma das bases para conversao:
                  sua opção: '''))
 
 if base == 1:
-    print("o numero {} em BINARIO fica \033[4;31m{}\033[m".format(numero, bin(numero)))
+    print("o numero {} em BINARIO fica \033[4;31m{}\033[m".format(numero, bin(numero)[2:]))
+    #Coloca [] depois da variavel para fatiar.
 elif base == 2:   
-    print(f"o numero{numero} em OCTAL fica \033[4;31m{oct(numero)}\033[m")
+    print(f"o numero{numero} em OCTAL fica \033[4;31m{oct(numero)[2:]}\033[m")
 elif base == 3:
-    print(f"o numero {numero} em HEXADECIMAL fica \033[4:31m{hex(numero)}\033[m")
+    print(f"o numero {numero} em HEXADECIMAL fica \033[4:31m{hex(numero)[2:]}\033[m")
