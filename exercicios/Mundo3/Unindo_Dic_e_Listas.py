@@ -27,7 +27,6 @@ while True:
     if res == "N":
         break
 print('-=' * 30)
-print(grupo)
 print(f'A) Foram cadastradas o total de \033[1;31m{len(grupo)}\033[m pessoa(s)!')
 print(f'B) A média de idade das pessoa(s) é de: \033[1;31m{media:,.2f}\033[m')
 print(f'C) A(s) mulher(es) cadastrada(s) foram: \033[1;31m{mulheres}\033[m')
