@@ -35,4 +35,4 @@ for c in grupo:
     if c['Idade'] >= media:
         print(f'\033[1;31m{c["Nome"]}\033[m')
 print('-=' * 30)
-
+print('<< ENCERRADO >>')

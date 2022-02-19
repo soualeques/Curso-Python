@@ -2,13 +2,8 @@
 O programa vai ler o nome do jogador e quantas partidas ele jogou. Depois 
 vai ler a quantidade de gols feitos em cada partida. No final, tudo isso sera guardado em
 um dicionario, incluindo o total de gols feitos durante o campeonato.'''
-
-from re import A
-
-
 jogador = {}
 gols = []
-
 total_gols = 0
 jogador['Nome'] = str(input('Nome do jogador: ')).strip().title()
 partidas = int(input(f'Quantas partidas {jogador["Nome"]} jogou?  '))
