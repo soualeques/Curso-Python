@@ -5,7 +5,7 @@ from random import randint
 from time import sleep
 
 
-numeros = []
+
 def sorteia(lista):
     print('-='* 30)
     print('A lista de numeros sorteados foi: ', end="", flush=True)
@@ -26,6 +26,7 @@ def SomaPar(lista):
     print('-=' * 30)
 
 
+numeros = []
 sorteia(numeros)
 SomaPar(numeros)
             
