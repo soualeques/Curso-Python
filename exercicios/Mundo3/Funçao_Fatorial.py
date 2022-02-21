@@ -5,7 +5,7 @@ from math import factorial
 
 def fatorial(num, show=False):
     '''
-    funcao para calcular o fatorial de qualquer numero, tendo opcao de mostrar ou nao
+    -> funcao para calcular o fatorial de qualquer numero, tendo opcao de mostrar ou nao
     a conta.
     num = numero para saber o fatorial;
     show = False para mostra apenas o resultado e True para mostra a conta.
