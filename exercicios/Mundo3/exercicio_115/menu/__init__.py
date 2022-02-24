@@ -1,4 +1,5 @@
 from time import sleep
+from arquivo import *
 
 ca = (
     '\033[m',        # 0 Default
@@ -20,32 +21,48 @@ cl = (
 
 
 def men(txt):
-    print('-' * len(txt)) 
-    print(f'{cl[3]}{txt}{cl[0]}')
-    print('-' * len(txt))
+    print('-' * 42) 
+    print(f'{cl[3]}{txt:^35}{cl[0]}')
+    print('-' * 42)
+
+
     
 def escolhas(msg):
  while True:   
     sleep(1.5)
-    men('           MENU PRINCIPAL          ')
+    men('MENU PRINCIPAL')
     print(f'''{cl[4]}1 - CADASTRAR NOVA PESSOA
 2 - VISUALIZAR PESSOAS CADASTRADAS
 3 - SAIR{cl[0]}''')
     print('-' * 35)
     try:
-            f = int(input(msg))
+            f = int(input(f'{cl[2]}{msg}{cl[0]}'))
     except:
             print('\033[1;31mErro Digite um numero valido\033[m')
             continue
     else:
             if f == 1:
-                print('pessoa cadastrada')
+                while True:
+                    men('CADASTRO')
+                    try:
+                        sleep(0.5)
+                        nome = str(input('Nome: ')).strip().title()
+                        idade = int(input('Idade: '))
+                        cadastrarArquivo('Cursoemvideo.txt', nome, idade)
+                        print(f'{nome} com {idade} anos cadastrado com sucesso!')
+                        break
+                    except ValueError:
+                        print('Erro de valor! Digite um numero inteiro valido!')
             elif f == 2:
-                print('pessoas sao:...')
+                men('PESSOAS CADASTRADAS')
+                print(f'{cl[3]}{"NOME":<30}{"IDADE"}{cl[0]}')
+                print('-' * 42)
+                lerArquivo('Cursoemvideo.txt')
+                
             elif f == 3:
-                print('Saindo do programa...')
+                men('Saindo do programa...')
                 sleep(1)
                 break
             else:
-                 print('{cl[1]}Nao tem essa escolha!{cl[0]}')
+                print(f"{cl[1]}Nao tem essa escolha!{cl[0]}")
     
